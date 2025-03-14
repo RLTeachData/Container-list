@@ -3,8 +3,8 @@ FROM ubuntu:22.04
 ENV DEBIAN_FRONTEND=noninteractive
 
 # 更新系統並安裝 Python 3.9、pip 和必要的工具
-RUN apt update && apt install sudo curl wget\
-    && sudo apt install -y software-properties-common \
+RUN apt update && apt install -y sudo \
+    && sudo apt install -y git curl wget software-properties-common \
     && sudo add-apt-repository -y ppa:deadsnakes/ppa \
     && sudo apt update \
     && apt install -y python3.9 \
